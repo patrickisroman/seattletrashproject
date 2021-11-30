@@ -38,10 +38,10 @@ This will download `annotations.json` containing a coco-comaptible dataset file.
 # Format
 
 Each annotation in the dataset contains four keys:
-- element: the type of object | ex: `beverage bottle, cigarette, bottlecap, etc.`
-- material: the material the object is made of | ex: `polyethylene terephthalate, polypropylene, aluminum, etc.`
-- mass: the mass of the object in grams (g) | ex: `15`
-- quality: rough probability an item can be repurposed [0-1.0] | ex: `0.59`
+- **element**: the type of object | ex: `beverage bottle, cigarette, bottlecap, etc.`
+- **material**: the material the object is made of | ex: `polypropylene, aluminum, etc.`
+- **mass**: the mass of the object in grams (g) | ex: `15`
+- **quality**: rough probability an item can be repurposed [0-1.0] | ex: `0.59`
 
 The coco category map defaults to element. `annotations` will include a categoryMap which maps keys to category id, ex: 
 ```
