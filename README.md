@@ -1,6 +1,6 @@
 # Seattle Trash Project
 
-<center>
+<center style="display:block; float:left;">
 <img src="https://s3.us-west-2.amazonaws.com/seattletrashproject.com/1.png" width="200" height="200">
 <img src="https://s3.us-west-2.amazonaws.com/seattletrashproject.com/2.png" width="300" height="200">
 <img src="https://s3.us-west-2.amazonaws.com/seattletrashproject.com/3.png" width="300" height="200">
