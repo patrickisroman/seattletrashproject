@@ -2,6 +2,7 @@ import boto3
 import json
 import multiprocessing
 import requests
+import argparse
 
 from decimal import Decimal
 from pathlib import Path
@@ -20,9 +21,15 @@ config_map = {
         'key': 'file_name'
     }
 }
-mode = 'regular'
 
+# Parse arguments
+parser = argparse.ArgumentParser(description='Process some integers.')
+parser.add_argument("--small", action="store_true")
+args = parser.parse_args()
+
+# Create client
 s3 = boto3.client('s3', region_name='us-west-2')
+mode = "small" if args.small else "regular"
 
 def download_image(image):
     s3.download_file(BUCKET_NAME, image[config_map[mode]['key']], image[config_map[mode]['key']])
