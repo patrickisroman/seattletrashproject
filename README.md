@@ -37,13 +37,32 @@ This will download `annotations.json` containing a coco-comaptible dataset file.
 
 # Format
 
+Example annotation:
+```
+{
+    "id": 225,
+    "file_name": "images/0634df25e6cde74c3de7283ae109f6f6.png",
+    "s3key": "images/0634df25e6cde74c3de7283ae109f6f6.png",
+    "small_file_name": "images-small/0634df25e6cde74c3de7283ae109f6f6.png",
+    "small_s3key": "images-small/0634df25e6cde74c3de7283ae109f6f6.png",
+    "height": 4032,
+    "width": 3024,
+    "material": "low-density polyethylene",
+    "element": "resealable food bag",
+    "mass": 2.0,
+    "quality": 0.75,
+    "producer": null
+}
+```
+
 Each annotation in the dataset contains four keys:
 - **element**: the type of object | ex: `beverage bottle, cigarette, bottlecap, etc.`
-- **material**: the material the object is made of | ex: `polypropylene, aluminum, etc.`
+- **material**: the dominant material the object is made of | ex: `polypropylene, aluminum, etc.`
 - **mass**: the mass of the object in grams (g) | ex: `15`
-- **quality**: rough probability an item can be repurposed [0-1.0] | ex: `0.59`
+- **quality**: rough probability a post-consumer item can be recovered [0-1.0] | ex: `0.59`
 
-The coco category map defaults to element. `annotations` will include a categoryMap which maps keys to category id, ex: 
+The `producer` key is optional, and indicates which producer is associated with the item. The coco category map defaults to `element`. `annotations.json` will include a `categoryMap` object which maps keys to category id, ex: 
+
 ```
 categoryMap = {
     "beverage bottle" : 1,
