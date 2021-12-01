@@ -1,5 +1,3 @@
-# Seattle Trash Project
-
 <p align="center">
 <img src="https://seattletrashproject.com/img/stp-black.png" style="padding: 10px" width="300">
 </p>
