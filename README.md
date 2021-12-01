@@ -1,8 +1,8 @@
 # Seattle Trash Project
 
-<center>
+<p align="center">
 <img src="https://seattletrashproject.com/img/stp-black.png" style="padding: 10px" width="300">
-</center>
+</p>
 
 <center>
 <img src="https://s3.us-west-2.amazonaws.com/seattletrashproject.com/4.png">
